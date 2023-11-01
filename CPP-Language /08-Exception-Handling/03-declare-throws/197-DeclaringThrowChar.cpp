@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+float division(float x, float y) throw(char)
+{
+    if (y == 0)
+        throw 'o';
+    return x / y;
+}
+int main()
+{
+    int a, b;
+    cout << "Enter the vlaue of a : ";
+    cin >> a;
+    cout << "Enter the vlaue of b : ";
+    cin >> b;
+    try
+    {
+        int c;
+        c = division(a, b);
+        cout << a << " / " << b << " = " << c;
+    }
+    catch (char e)
+    {
+        cout << "Division by ZERO : Code : " << e;
+    }
+    cout << "\nBYE";
+    return 0;
+}
